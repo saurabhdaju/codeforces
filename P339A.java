@@ -18,5 +18,6 @@ public class P339A {
         }
         Arrays.sort(arr);
         String output = "";
+        
     }
 }
