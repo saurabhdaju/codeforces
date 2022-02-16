@@ -5,22 +5,20 @@ public class P1352A {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for(int i=1; i<=t; i++) {
-            String n = sc.next();
+            int n = sc.nextInt();
+            String str = "";
             int bin = 0;
-            for(int j=0; j<n.length(); j++) {
-                if(n.charAt(j) != '0')
+            int a = 1;
+            while (n > 0) {
+                if(n%10 != 0) {
+                    str += n%10 * a + " ";
                     bin++;
+                }
+                n /= 10;
+                a *=10;
             }
             System.out.println(bin);
-            for(int j=0; j<n.length(); j++) {
-                if(n.charAt(j) != '0') {
-                    System.out.print(n.charAt(j));
-                    for(int k=1; k<=(n.length()-1-j); k++)
-                        System.out.print("0");
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
+            System.out.println(str);
         }
     }
 }
