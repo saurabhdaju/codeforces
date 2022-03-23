@@ -55,9 +55,8 @@ public class P1433A {
         FastReader sc = new FastReader();
         int t = sc.nextInt();
         while(t-->0) {
-            int x = sc.nextInt(), ans = 10 * ((x-1)%10);
-            for(int i=1; i<=Integer.toString(x).length(); i++) ans += i;
-            System.out.println(ans);
+            int x = sc.nextInt(), n = Integer.toString(x).length();
+            System.out.println((10 * (((x-1)%10))+ n*(n+1)/2));
         }
     }
 }
